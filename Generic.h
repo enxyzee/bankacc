@@ -24,18 +24,6 @@ public:
 	virtual int withdrawl(double bal);
 	virtual void calcInt();
 	virtual void monthlyProc();
-protected:
-	double balance;
-	int deposits;
-	int withdrawls;
-	double service;
-	double intrate;//annual interest rate
-public:
-	Generic(double bal, double anrate);
-	virtual int deposit(double depo);
-	virtual int withdrawl(double wthd);
-	virtual void calcInt();
-	virtual void monthlyProc();
 	virtual ~Generic();
 }; 
 #endif
