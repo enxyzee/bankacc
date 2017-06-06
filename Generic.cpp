@@ -29,17 +29,17 @@ Generic::Generic(double bal, double anrate)
 {
 	balance = bal;
 	intrate = anrate;
-}
+}//set balance and annual rate at construction
 void Generic::deposit(double depo)
 {
 	balance += depo;
 	deposits += 1;
-}
+}//add deposit to balance, increment #of deposits
 void Generic::withdraw(double wthd)
 {
 	balance -= wthd;
 	withdrawls += 1;
-}
+}//subtract withdrawl from balance, increment #of withdrawls
 void Generic::calcInt()
 {
 	double morate = intrate / 12;//find monthly rate 
