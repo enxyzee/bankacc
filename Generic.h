@@ -19,10 +19,10 @@ protected:
 	double service;
 	double intrate;
 public:
-	Generic(double bal, double intrest);
+	Generic(double bal, double anrate);
 	virtual int deposit( double bal);
 	virtual int withdrawl(double bal);
-	void calcInt();
-	void monthlyProc();
+	virtual void calcInt();
+	virtual void monthlyProc();
 
 };
