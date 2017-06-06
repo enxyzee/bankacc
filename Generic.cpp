@@ -1,0 +1,59 @@
+//============================================================================
+// Name        : Generic.cpp
+// Author      : nancy zhou
+// Version     : 1.0
+// Copyright   : no stealing
+// Description : 
+//============================================================================
+#include <iostream>
+#include <string>
+#include "Generic.h"
+using namespace std;
+
+/*
+protected:
+	double balance;
+	int deposits;
+	int withdrawls;
+	double service;
+	double intrate;//annual interest rate
+public:
+	Generic(double bal, double anrate);
+	virtual int deposit(double bal);
+	virtual int withdrawl(double bal);
+	virtual void calcInt();
+	virtual void monthlyProc();
+	*/
+
+Generic::Generic(double bal, double anrate)
+{
+	balance = bal;
+	intrate = anrate;
+}
+void Generic::deposit(double depo)
+{
+	balance += depo;
+	deposits += 1;
+}
+void Generic::withdraw(double wthd)
+{
+	balance -= wthd;
+	withdrawls += 1;
+}
+void Generic::calcInt()
+{
+	double morate = intrate / 12;//find monthly rate 
+	double moint = balance* morate;// find monthly interest amt
+	balance += moint;//update bal
+}
+void Generic::monthlyProc()
+{
+	balance -= service;
+	calcInt();
+	//maybe a cout function here or individually in the checking and savings
+	deposits = 0;
+	withdrawls = 0;
+	service = 0;//reset var
+
+}
+

@@ -21,7 +21,7 @@ protected:
 public:
 	Generic(double bal, double anrate);
 	virtual void deposit( double bal);
-	virtual void withdrawl(double bal);
+	virtual void withdraw(double bal);
 	virtual void calcInt();
 	virtual void monthlyProc();
 	virtual ~Generic();
