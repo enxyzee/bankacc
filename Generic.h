@@ -1,7 +1,7 @@
 //============================================================================
 // Name        : Generic.h
 // Author      : nancy zhou
-// Version     : 1.0
+// Version     : 1.1- variable types updated and all functions set to void.
 // Copyright   : no stealing
 // Description :
 //============================================================================
@@ -20,8 +20,8 @@ protected:
 	double intrate;//annual interest rate
 public:
 	Generic(double bal, double anrate);
-	virtual int deposit( double bal);
-	virtual int withdrawl(double bal);
+	virtual void deposit( double bal);
+	virtual void withdrawl(double bal);
 	virtual void calcInt();
 	virtual void monthlyProc();
 	virtual ~Generic();
