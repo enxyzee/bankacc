@@ -3,10 +3,10 @@
 // Author      : nancy zhou
 // Version     : 1.0
 // Copyright   : no stealing
-// Description : 
+// Description :
 //============================================================================
 #include <iostream>
-#include <string>
+
 #include "Generic.h"
 using namespace std;
 
@@ -42,7 +42,7 @@ void Generic::withdraw(double wthd)
 }//subtract withdrawl from balance, increment #of withdrawls
 void Generic::calcInt()
 {
-	double morate = intrate / 12;//find monthly rate 
+	double morate = intrate / 12;//find monthly rate
 	double moint = balance* morate;// find monthly interest amt
 	balance += moint;//update bal
 }
@@ -56,4 +56,5 @@ void Generic::monthlyProc()
 	service = 0;//reset var
 
 }
+
 

@@ -8,7 +8,7 @@
 #ifndef GENERIC_H
 #define GENERIC_H
 #include <iostream>
-#include <string>
+using namespace std;
 
 class Generic
 {
@@ -20,10 +20,10 @@ protected:
 	double intrate;//annual interest rate
 public:
 	Generic(double bal, double anrate);
-	virtual void deposit( double bal);
-	virtual void withdraw(double bal);
+	virtual void deposit( double depo);
+	virtual void withdraw(double wthd);
 	virtual void calcInt();
 	virtual void monthlyProc();
-	virtual ~Generic();
-}; 
+	virtual ~Generic(){};
+};
 #endif
