@@ -46,15 +46,24 @@ void Generic::calcInt()
 	double moint = balance* morate;// find monthly interest amt
 	balance += moint;//update bal
 }
+
+void print()
+{
+    cout<<"Your balance is: $"<<balance<<"."endl;
+    cout<< "You made "<<withdrawls<<" withdrawals and "<<deposits<<" deposits."<<endl;
+    cout<<"You were charged $"<<service<<"in service charges."<<endl;
+    cout<<"End of monthly statement.Thank you"<<endl;
+}
+
 void Generic::monthlyProc()
 {
 	balance -= service;
 	calcInt();
 	//maybe a cout function here or individually in the checking and savings
+	print();
 	deposits = 0;
 	withdrawls = 0;
 	service = 0;//reset var
 
 }
-
 

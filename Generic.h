@@ -18,6 +18,7 @@ protected:
 	int withdrawls;
 	double service;
 	double intrate;//annual interest rate
+	void print();
 public:
 	Generic(double bal, double anrate);
 	virtual void deposit( double depo);
