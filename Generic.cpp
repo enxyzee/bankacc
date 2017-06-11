@@ -1,7 +1,8 @@
 //============================================================================
 // Name        : Generic.cpp
 // Author      : nancy zhou
-// Version     : 1.0
+// Version     : 1.1- added private print function
+//              1.0- made instructed functions
 // Copyright   : no stealing
 // Description :
 //============================================================================
@@ -38,7 +39,7 @@ void Generic::deposit(double depo)
 void Generic::withdraw(double wthd)
 {
 	balance -= wthd;
-	withdrawls += 1;
+	withdrawals += 1;
 }//subtract withdrawl from balance, increment #of withdrawls
 void Generic::calcInt()
 {
@@ -47,10 +48,10 @@ void Generic::calcInt()
 	balance += moint;//update bal
 }
 
-void print()
+void Generic::print()
 {
-    cout<<"Your balance is: $"<<balance<<"."endl;
-    cout<< "You made "<<withdrawls<<" withdrawals and "<<deposits<<" deposits."<<endl;
+    cout<<"Your balance is: $"<<balance<<"."<<endl;
+    cout<< "You made "<<withdrawals<<" withdrawals and "<<deposits<<" deposits."<<endl;
     cout<<"You were charged $"<<service<<"in service charges."<<endl;
     cout<<"End of monthly statement.Thank you"<<endl;
 }
@@ -58,11 +59,14 @@ void print()
 void Generic::monthlyProc()
 {
 	balance -= service;
+	cout<< "balance"<<endl;
 	calcInt();
+	cout<< "int"<<endl;
 	//maybe a cout function here or individually in the checking and savings
-	print();
+	Generic::print();
+	cout<< "print"<<endl;
 	deposits = 0;
-	withdrawls = 0;
+	withdrawals = 0;
 	service = 0;//reset var
 
 }

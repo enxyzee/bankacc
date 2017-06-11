@@ -15,7 +15,7 @@ class Generic
 protected:
 	double balance;
 	int deposits;
-	int withdrawls;
+	int withdrawals;
 	double service;
 	double intrate;//annual interest rate
 	void print();
